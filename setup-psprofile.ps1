@@ -10,7 +10,7 @@ if ( -not (Get-Module -ListAvailable 'posh-git') ) {
     Install-Module 'posh-git' -Scope AllUsers
 }
 
-$PSScriptRoot\powerline-config.ps1
+& "$PSScriptRoot\powerline-config.ps1"
 
 Copy-Item $PSScriptRoot\psprofile\robprofile.ps1 $env:OneDrive
 if (-not (Test-Path $PROFILE.CurrentUserAllHosts)) {
